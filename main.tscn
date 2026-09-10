@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c8gs4ledvyyor"]
+
+[ext_resource type="Script" uid="uid://cu7eykcnxs4xp" path="res://main.gd" id="1_ig7tw"]
+
+[sub_resource type="GDScript" id="GDScript_0xm2m"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Control" type="Control" unique_id=1748968984]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig7tw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1194813094]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1391983842]
+layout_mode = 2
+text = "NodeTunnel Multiplayer Test"
+
+[node name="HostButton" type="Button" parent="VBoxContainer" unique_id=314662970]
+layout_mode = 2
+text = "HOST GAME"
+
+[node name="RoomCode" type="LineEdit" parent="VBoxContainer" unique_id=1237144206]
+layout_mode = 2
+placeholder_text = "Enter room code..."
+
+[node name="JoinButton" type="Button" parent="VBoxContainer" unique_id=440736505]
+layout_mode = 2
+text = "JOIN GAME"
+
+[node name="Status" type="Label" parent="VBoxContainer" unique_id=1673686742]
+layout_mode = 2
+text = "Disconnected"
+script = SubResource("GDScript_0xm2m")
